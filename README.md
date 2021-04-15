@@ -1,1 +1,1 @@
- # yeah simple responsive blog
+ ## yeah simple responsive blog
