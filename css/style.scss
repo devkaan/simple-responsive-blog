@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh; // vh => vertical height, 100 vh ekranın yüksekliği, 1 vh ekranın yüksekliğinin yüzde biri
+}
+
+body {
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 100vh;
+
+    .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .logo {
+            margin-right: 10px;
+
+            img {
+                max-width: 150px;
+                max-height: 150px;
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .menudiv {
+            width: 100%;
+
+            .menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                * {
+                    margin-right: 5px;
+                }
+
+                li {
+                    a {
+                        color: #121212;
+                        font-size: 1em;
+                        font-weight: 400;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .center {
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .text {
+            max-width: 550px;
+            min-width: 200px;
+            width: 100%;
+            display: block;
+            flex-direction: row;
+
+            &:nth-child(odd) {
+                margin-right: 20px;
+            }
+
+            .img {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 100%;
+                    margin-bottom: 0px;
+                }
+            }
+
+            * {
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font-size: 30px;
+                text-decoration: underline;
+                letter-spacing: 2px;
+                font-weight: 700;
+                display: block;
+            }
+
+            .article {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .center {
+
+        .text {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin-bottom: 40px;
+
+            &::nth-last-child() {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
